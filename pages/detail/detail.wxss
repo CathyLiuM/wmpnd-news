@@ -1,0 +1,28 @@
+.news-detail{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.news-info{
+  display: flex;
+  color: gray;
+  font-size: 35rpx;
+  line-height: 49rpx;
+  margin-bottom: 40rpx;
+}
+.news-title{
+  font-size: 50rpx;
+  line-height: 70rpx;
+}
+.news-source{
+  margin-right: 20rpx;
+}
+.news-date{
+  margin-right: 20rpx;
+}
+.news-readCount{
+  margin-left: 40rpx;
+}
+.news-contents{
+  font-size: 35rpx;
+  line-height: 49rpx;
+}

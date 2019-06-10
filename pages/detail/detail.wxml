@@ -1,0 +1,17 @@
+<view class='news-detail'>
+  <view class='news-title'>{{newsTitle}}</view>
+  <view class='news-info'>
+    <view class='news-source'>{{newsSource}}</view>
+    <view class='news-date'>{{newsDate}}</view>
+    <view class='news-readCount'>阅读 {{readCount}}</view>
+  </view>
+  
+  <view class='news-contents'>
+    <view class='news-content-item' wx:for='{{newsContents}}'>
+      <p wx:if="{{item.type=='p'}}">
+      {{item.text}}</p>
+      <image wx:if="{{item.type=='image'}}" src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>
+

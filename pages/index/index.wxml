@@ -1,0 +1,37 @@
+<view class="news-wrapper">
+  <view class='navigation-title'>
+    <view class='news-item' wx:for='{{newsInfo}}' bindtap='onTapNewsItem' data-item="{{item.type}}">
+      <view class='news-type'>{{item.type}}</view>
+      <view wx:if="{{tapNewsType==item.type}}" class='news-bottom'>—</view>
+    </view>
+  </view>
+  <view class='navigation-list'>
+    <view class='hot-news' bindtap='onTapNewsItem2Detail' data-item="{{hotNewsId}}">
+      <image class='hot-news-bg' src='{{hotNewsBackground}}'></image>
+      <view class="content">
+        <view class='right-croner'>
+          <text class='right-corner-text'>热门</text>
+        </view>
+        <view class='hot-bottom'>
+          <view class='hot-title'>
+            <text class='bottom-large-text'>{{hotNewsTitle}}</text>
+          </view>
+          <view class='hot-info'>
+            <text class='bottom-source-text'>{{hotNewsSource}}</text>
+            <text class='bottom-date-text'>{{hotNewsDate}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='news-follow-list'>
+  <view class='news-follow-item' wx:for='{{newsList}}' bindtap='onTapNewsItem2Detail' data-item="{{item.id}}">
+    <view class='news-follow-item-info'>
+      <view class='news-follow-item-title'>{{item.title}}</view>
+      <view class='news-follow-item-source'>{{item.source}}</view>
+      <view class='news-follow-item-date'>{{item.date}}</view>
+    </view>
+    <image class='news-follow-item-image' src='{{item.firstImage}}'></image>
+  </view>
+</view>
